@@ -2,7 +2,7 @@
 
 Solution branch: `master`
 
-* Add required dependencies
+Required dependencies
 
 ```xml
 <dependencies>
@@ -16,27 +16,6 @@ Solution branch: `master`
     </dependency>
 </dependencies>
 ```
-
-* Introduce a REST controller
-
-```java
-package io.pivotal.workshop.workshopfortuneservice;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class FortuneController {
-
-    @GetMapping
-    public String fortune() {
-        return "No fortune";
-    }
-}
-
-```
-
-* Push the application to Cloud Foundry
 
 ```bash
 cf push workshop-fortune-service --random-route -p target/workshop-fortune-service-0.0.1-SNAPSHOT.jar
@@ -149,3 +128,9 @@ cf app fortune-service
 * Show the deployed application in the Pivotal Cloud Foundry web console:
 
 [https://console.run.pivotal.io/](https://console.run.pivotal.io/)
+
+* Stop the Fortune service
+
+```bash
+cf stop fortune-service
+```

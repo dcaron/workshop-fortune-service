@@ -46,6 +46,7 @@
             <artifactId>spring-cloud-services-starter-config-client</artifactId>
         </dependency>
 
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -90,6 +91,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
