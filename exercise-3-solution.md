@@ -95,7 +95,7 @@ cf create-service p-config-server trial workshop-config-server -c '{"git": { "ur
 * Start a database in Cloud Foundry
 
 ```bash
-cf create-service cleardb spark workshop-db
+cf create-service p.mysql db-small workshop-db
 ```
 
 * Bind the database and config server services to the application
