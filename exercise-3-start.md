@@ -28,7 +28,7 @@ cf create-service p.mysql db-small workshop-db
 * Start a `Config Server` in Cloud Foundry and expose the configuration from this project
 
 ```
-cf create-service p-config-server trial workshop-config-server -c '{"git": { "uri": "https://github.com/dcaron/workshop-fortune-service.git", "searchPaths": "configuration", "label": "2-persistent-database-config-server" } }'
+cf create-service p-config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/dcaron/workshop-fortune-service.git", "searchPaths": "configuration", "label": "2-persistent-database-config-server" } }'
 ```
 
 * Disable security for now by adding a `SecurityConfig` and expose the actuator management endpoints (don't do this in production, have proper endpoint auth there unless your API is public altogether)
