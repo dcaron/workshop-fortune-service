@@ -37,12 +37,6 @@ The Cloud bus is used by the UI
 ```bash
 cf create-service cloudamqp lemur workshop-cloud-bus
 ```
- 
-* Start a Hystrix Dashboard service instance with name `workshop-circuit-breaker-dashboard` on Cloud Foundry
-
-```bash
-cf create-service p-circuit-breaker-dashboard trial workshop-circuit-breaker-dashboard
-```
 
 * Push the UI to Cloud Foundry
 
@@ -51,7 +45,6 @@ If you have time left:
 * Check the service registry Dashboard in the browser and see that both applications are registered
 * Play around to (auto) scale the number of instances of your Fortune Service
 * Completely shut down all instances of your Fortune Service and see how the UI application behaves
-* Take a look at the Hystrix Dashboard in the browser    
 
 ## Hints
 
